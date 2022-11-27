@@ -146,7 +146,7 @@ regForm.addEventListener("submit", function (event) {
     }
   }
     if (Object.keys(errors).length == 0) {
-        regForm.onsubmit();
+        regForm.submit();
     }
 });
 
