@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slider</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="div-nav">
+        <a href="index.html">logo</a>
+        <nav>
+          <ul class="nav-ul">
+            <li>Home</li>
+            <li>News</li>
+            <li>Contacts</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="slider-wraper">
+        <button class="arrow left">
+          <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
+        </button>
+        <button class="arrow right" id="arrow-right">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <div class="slider-content" id="sider-content"></div>
+      </div>
+    </section>
+
+    <section class="reg-section">
+        <h3 class="reg-h3">Registration</h3>
+        <form action="" class="form-box" id="reg-form" method="post">
+            <div>
+                <input type="text" name="username" id="userNameField" placeholder="Enter your name">
+                <span class="error-text" id="error_username"></span>
+            </div>
+            <div>
+                <input type="password" name="password" id="passwordField" placeholder="Enter your password">
+                <i class="fa-regular fa-eye" id="passicon"></i>
+                <span class="error-text" id="error_password"></span>
+            </div>
+            <div>
+                <input type="password" name="password2" id="passwordFildRepeat" placeholder="Reentered your password">
+                <i class="fa-regular fa-eye" id="passicon2"></i>
+                <span class="error-text" id="error_password2"></span>
+            </div>
+            <div>
+                <input type="checkbox" name="agree" id="agreeTearms">
+                <span class="error-text" id="error_agree"></span>
+                <label for="agreeTerms">
+                    <a href="#">I agree terms and conditions</a> 
+                </label>
+                <button type="submit">Submit Form</button>
+            </div>
+        </form>
+
+    </section>
+
+    <!-- splide -->
+    <h2 class="spljs">splide</h2>
+    <section class="carousel" aria-label="carousel">
+      <!-- Large, currently-active image -->
+      <div class="current-image">
+        <img src="images/splidejs/sp1.jpg" alt="Succulents 1" />
+      </div>
+
+      <!-- Thumbnail track -->
+      <div class="thumbnails-track">
+        <!-- Previous button -->
+        <div class="arrow-wrapper previous-button-wrapper">
+          <button class="previous-button button">
+            <span class="fas fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous tiles</span>
+          </button>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="splide">
+          <div class="splide__track">
+            <div class="splide__list">
+              <div class="thumbnail splide__slide">
+                <button class="thumbnail-button" aria-current="true">
+                  <img
+                    src="images/splidejs/sp1.jpg"
+                    alt="image 1 of 5"
+                    data-full-alt="Succulents 1"
+                  />
+                </button>
+              </div>
+
+              <div class="thumbnail splide__slide">
+                <button class="thumbnail-button">
+                  <img
+                    src="images/splidejs/sp2.jpg"
+                    alt="image 2 of 5"
+                    data-full-alt="Succulents 2"
+                  />
+                </button>
+              </div>
+
+              <div class="thumbnail splide__slide">
+                <button class="thumbnail-button">
+                  <img
+                    src="images/splidejs/sp3.jpg"
+                    alt="image 3 of 5"
+                    data-full-alt="Succulents 3"
+                  />
+                </button>
+              </div>
+
+              <div class="thumbnail splide__slide">
+                <button class="thumbnail-button">
+                  <img
+                    src="images/splidejs/sp4.jpg"
+                    alt="image 4 of 5"
+                    data-full-alt="Succulents 4"
+                  />
+                </button>
+              </div>
+
+              <div class="thumbnail splide__slide">
+                <button class="thumbnail-button">
+                  <img
+                    src="images/splidejs/sp5.jpg"
+                    alt="image 5 of 5"
+                    data-full-alt="Succulents 5"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next button -->
+        <div class="arrow-wrapper next-button-wrapper">
+          <button class="next-button button">
+            <span class="fas fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next tiles</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="java.js"></script>
+  </body>
+</html>
