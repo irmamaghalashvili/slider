@@ -55,7 +55,18 @@ function createDots() {
   data.forEach((element) => {
     let dot = document.createElement("div");
     dot.classList.add("dot");
+    let dotId = element.id;
+    if (dotId == sliderIndex + 1) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove ('active');
+    }
     dotsParent.appendChild(dot);
+    function dotsList() {
+      sliderIndex = dotId - 1;
+      slider();
+    }
+    dot.addEventListener('click', dotsList);
   });
   return dotsParent;
 }
@@ -99,6 +110,7 @@ setInterval(() => {
 }, 3000);
 
 slider();
+
 
 // registracion form
 let regForm = document.getElementById("reg-form");
@@ -147,11 +159,11 @@ icon.addEventListener('click', function() {
         icon.classList.remove('fa-eye');
         icon.classList.add('fa-eye-slash');
     } else {
-        password.setAttribute('type', 'password')
-        icon.classList.remove('fa-eye-slash')
-        icon.classList.add('fa-eye')
+        password.setAttribute('type', 'password');
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
     }
-})
+});
 let password2 = document.getElementById('passwordFildRepeat');
 let icon2 = document.getElementById('passicon2');
 
@@ -161,11 +173,11 @@ icon2.addEventListener('click', function() {
         icon2.classList.remove('fa-eye');
         icon2.classList.add('fa-eye-slash');
     } else {
-        password2.setAttribute('type', 'password')
-        icon2.classList.remove('fa-eye-slash')
-        icon2.classList.add('fa-eye')
+        password2.setAttribute('type', 'password');
+        icon2.classList.remove('fa-eye-slash');
+        icon2.classList.add('fa-eye');
     }
-})
+});
 
 // splide
 var currentImage;
